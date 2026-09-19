@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f5;
+    color: #111;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 60px auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.header p {
+    font-size: 18px;
+    color: #666;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #777;
+    margin-bottom: 22px;
+}
+
+.upload-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+button {
+    border: none;
+    background: #111;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #333;
+}
+
+button:disabled {
+    background: #888;
+    cursor: not-allowed;
+}
+
+#uploadStatus {
+    margin-top: 18px;
+    font-size: 15px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 130px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 16px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #111;
+}
+
+#answer {
+    display: none;
+    margin-top: 25px;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    line-height: 1.6;
+}
+
+.answer-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.sources {
+    margin-top: 18px;
+    font-size: 14px;
+    color: #555;
+}
+
+.source {
+    display: inline-block;
+    background: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin: 5px 5px 0 0;
+    border: 1px solid #ddd;
+}
