@@ -1213,7 +1213,7 @@ function setupMainButtons() {
             formData.append("file", file);
 
             const response = await fetch(
-              "http://localhost:5000/upload",
+              "http://https://memory-agent-dwfr.onrender.com/upload",
               {
                 method: "POST",
                 body: formData
@@ -1320,7 +1320,7 @@ function setupMainButtons() {
         try {
 
           const response = await fetch(
-            "http://localhost:5000/ask",
+            "http://https://memory-agent-dwfr.onrender.com/ask",
             {
               method: "POST",
               headers: {
