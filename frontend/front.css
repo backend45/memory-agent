@@ -1,0 +1,1511 @@
+/* ============================================
+   MEMORY AI
+   BRAND PALETTE
+============================================ */
+
+:root {
+  --black: #250902;
+  --dark: #38040e;
+  --deep-red: #640d14;
+  --red: #800e13;
+  --accent: #ad2831;
+
+  --white: #ffffff;
+  --cream: #fffaf9;
+  --soft: #f8eeee;
+  --border: #ead9d7;
+  --muted: #806c6c;
+}
+
+
+/* ============================================
+   RESET
+============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: var(--white);
+  color: var(--black);
+}
+
+button,
+textarea,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* ============================================
+   APP
+============================================ */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+}
+
+
+/* ============================================
+   SIDEBAR
+============================================ */
+
+.sidebar {
+  width: 245px;
+  min-height: 100vh;
+
+  border-right: 1px solid var(--border);
+  background: #fff;
+
+  padding: 17px 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  flex-shrink: 0;
+}
+
+
+/* BRAND */
+
+.brand {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 0 8px;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.brand-logo {
+  width: 29px;
+  height: 29px;
+
+  border-radius: 8px 8px 8px 2px;
+
+  background: var(--red);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  box-shadow: 0 5px 14px rgba(128, 14, 19, .15);
+}
+
+.red-text {
+  color: var(--accent);
+}
+
+
+/* ============================================
+   NEW BUTTON
+============================================ */
+
+.new-btn {
+  margin: 17px 6px 26px;
+
+  height: 38px;
+
+  border-radius: 8px;
+  border: 1px solid var(--border);
+
+  background: white;
+  color: var(--black);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-align: left;
+  padding: 0 13px;
+
+  transition: .2s ease;
+}
+
+.new-btn span {
+  font-size: 19px;
+  margin-right: 5px;
+  color: var(--red);
+}
+
+.new-btn:hover {
+  background: var(--soft);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+
+/* ============================================
+   SIDEBAR ITEMS
+============================================ */
+
+.sidebar-section {
+  margin-bottom: 23px;
+}
+
+.sidebar-title {
+  padding: 0 10px 8px;
+
+  font-size: 11px;
+  text-transform: uppercase;
+
+  letter-spacing: .07em;
+
+  font-weight: 700;
+
+  color: #9b8888;
+}
+
+.sidebar-item {
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 0 10px;
+
+  margin: 2px 0;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+
+  color: #6d5d5d;
+
+  transition:
+    background .2s ease,
+    color .2s ease,
+    transform .2s ease;
+}
+
+.sidebar-item span {
+  width: 17px;
+}
+
+.sidebar-item:hover {
+  background: var(--soft);
+  color: var(--red);
+  transform: translateX(2px);
+}
+
+.sidebar-item.active {
+  background: #f6e7e7;
+  color: var(--red);
+  font-weight: 600;
+}
+
+
+/* ============================================
+   SIDEBAR BOTTOM
+============================================ */
+
+.sidebar-bottom {
+  margin-top: auto;
+
+  border-top: 1px solid var(--border);
+
+  padding-top: 14px;
+}
+
+.workspace-user {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 7px;
+}
+
+.user-avatar {
+  width: 31px;
+  height: 31px;
+
+  border-radius: 50%;
+
+  background: var(--deep-red);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.workspace-user strong {
+  display: block;
+  font-size: 12px;
+}
+
+.workspace-user small {
+  display: block;
+
+  margin-top: 2px;
+
+  font-size: 10px;
+
+  color: var(--muted);
+}
+
+
+/* ============================================
+   MAIN
+============================================ */
+
+.main {
+  flex: 1;
+  min-width: 0;
+}
+
+
+/* ============================================
+   TOP BAR
+============================================ */
+
+.topbar {
+  height: 57px;
+
+  border-bottom: 1px solid var(--border);
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding: 0 10px;
+
+  background: white;
+
+  position: relative;
+  z-index: 20;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.language {
+  border: none;
+  background: none;
+
+  color: var(--dark);
+
+  font-size: 13px;
+
+  padding: 8px 10px;
+
+  border-radius: 7px;
+
+  transition: .2s ease;
+}
+
+.language:hover {
+  background: var(--soft);
+  color: var(--red);
+}
+
+
+/* These are kept for compatibility
+   with your existing HTML/JS */
+
+.upgrade {
+  border: none;
+  background: none;
+
+  color: var(--red);
+
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.signup {
+  border: none;
+
+  border-radius: 8px;
+
+  background: var(--red);
+  color: white;
+
+  padding: 9px 15px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.signup:hover {
+  background: var(--accent);
+}
+
+.mobile-brand {
+  display: none;
+}
+
+
+/* ============================================
+   HERO
+============================================ */
+
+.hero {
+  padding: 56px 25px 75px;
+
+  min-height: calc(100vh - 57px);
+
+  background:
+    radial-gradient(
+      circle at 50% 28%,
+      rgba(173, 40, 49, .09),
+      transparent 35%
+    );
+
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  width: min(100%, 900px);
+
+  margin: auto;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ============================================
+   FUTURISTIC MEMORY AI ORB
+============================================ */
+
+.memory-orb-container {
+  height: 125px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 8px;
+
+  position: relative;
+}
+
+
+/* subtle background glow */
+
+.memory-orb-container::before {
+  content: "";
+
+  position: absolute;
+
+  width: 170px;
+  height: 100px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(173, 40, 49, .13),
+      transparent 70%
+    );
+
+  filter: blur(15px);
+
+  animation: orbBackgroundGlow 3s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+
+/* ORB */
+
+.memory-orb {
+  width: 72px;
+  height: 72px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: orbFloat 4s ease-in-out infinite;
+
+  cursor: pointer;
+
+  z-index: 2;
+
+  transition: filter .25s ease;
+}
+
+.memory-orb:hover {
+  filter:
+    brightness(1.15)
+    drop-shadow(
+      0 0 15px rgba(173, 40, 49, .4)
+    );
+}
+
+
+/* CORE */
+
+.orb-core {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #ffffff 0%,
+      #ad2831 22%,
+      #800e13 58%,
+      #38040e 100%
+    );
+
+  box-shadow:
+    0 0 12px rgba(173, 40, 49, .8),
+    0 0 30px rgba(128, 14, 19, .45),
+    0 0 55px rgba(173, 40, 49, .25);
+
+  animation: orbPulse 2.2s ease-in-out infinite;
+
+  z-index: 3;
+}
+
+
+/* CORE HIGHLIGHT */
+
+.orb-core::after {
+  content: "";
+
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  opacity: .8;
+
+  margin-left: 7px;
+  margin-top: 6px;
+
+  filter: blur(.5px);
+}
+
+
+/* ============================================
+   ORBIT RINGS
+============================================ */
+
+.orb-ring {
+  position: absolute;
+
+  border: 1px solid rgba(173, 40, 49, .55);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.ring-one {
+  width: 55px;
+  height: 55px;
+
+  transform: rotate(25deg);
+
+  animation:
+    ringSpinOne 5s linear infinite;
+}
+
+.ring-two {
+  width: 76px;
+  height: 39px;
+
+  transform: rotate(-35deg);
+
+  border-color: rgba(128, 14, 19, .35);
+
+  animation:
+    ringSpinTwo 6s linear infinite;
+}
+
+.ring-three {
+  width: 88px;
+  height: 30px;
+
+  transform: rotate(65deg);
+
+  border-color: rgba(173, 40, 49, .22);
+
+  animation:
+    ringSpinThree 7s linear infinite;
+}
+
+
+/* ============================================
+   ORBIT PARTICLES
+============================================ */
+
+.orb-dot {
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  box-shadow:
+    0 0 9px rgba(173, 40, 49, .8);
+
+  z-index: 4;
+}
+
+.dot-one {
+  top: 4px;
+  left: 34px;
+
+  animation:
+    dotOne 3s linear infinite;
+}
+
+.dot-two {
+  right: 1px;
+  top: 31px;
+
+  animation:
+    dotTwo 3.5s linear infinite;
+}
+
+.dot-three {
+  bottom: 7px;
+  left: 18px;
+
+  animation:
+    dotThree 4s linear infinite;
+}
+
+.dot-four {
+  left: 5px;
+  top: 24px;
+
+  width: 3px;
+  height: 3px;
+
+  animation:
+    dotFour 2.8s linear infinite;
+}
+
+
+/* ============================================
+   ORB LABEL
+============================================ */
+
+.orb-label {
+  margin-top: 7px;
+
+  font-size: 8px;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+
+  color: #806c6c;
+
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  z-index: 3;
+}
+
+.orb-status {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #ad2831;
+
+  box-shadow:
+    0 0 7px rgba(173, 40, 49, .8);
+
+  animation:
+    statusBlink 1.5s ease-in-out infinite;
+}
+
+
+/* ============================================
+   ORB ANIMATIONS
+============================================ */
+
+@keyframes orbFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes orbPulse {
+
+  0%,
+  100% {
+    transform: scale(.92);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes orbBackgroundGlow {
+
+  0%,
+  100% {
+    opacity: .55;
+    transform: scale(.9);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes ringSpinOne {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ringSpinTwo {
+
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes ringSpinThree {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes dotOne {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(7px, -4px);
+  }
+}
+
+@keyframes dotTwo {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(4px, 7px);
+  }
+}
+
+@keyframes dotThree {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-6px, 4px);
+  }
+}
+
+@keyframes dotFour {
+
+  0%,
+  100% {
+    opacity: .35;
+    transform: scale(.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+
+@keyframes statusBlink {
+
+  0%,
+  100% {
+    opacity: .45;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+/* ============================================
+   EYEBROW
+============================================ */
+
+.eyebrow {
+  text-align: center;
+
+  color: var(--accent);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: .13em;
+
+  margin-bottom: 15px;
+}
+
+
+/* ============================================
+   HEADING
+============================================ */
+
+h1 {
+  max-width: 700px;
+
+  margin: auto;
+
+  text-align: center;
+
+  font-size: clamp(39px, 5vw, 59px);
+
+  line-height: 1.04;
+
+  letter-spacing: -.045em;
+
+  color: var(--black);
+}
+
+h1 span {
+  color: var(--red);
+}
+
+
+/* ============================================
+   DESCRIPTION
+============================================ */
+
+.hero-description {
+  max-width: 570px;
+
+  margin: 18px auto 38px;
+
+  text-align: center;
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.65;
+}
+
+
+/* ============================================
+   MEMORY CARD
+============================================ */
+
+.memory-card {
+  background: white;
+
+  border: 1px solid var(--border);
+
+  border-radius: 17px;
+
+  padding: 18px 22px 22px;
+
+  box-shadow:
+    0 20px 60px rgba(37, 9, 2, .08);
+
+  transition:
+    box-shadow .3s ease,
+    transform .3s ease;
+}
+
+.memory-card:hover {
+  box-shadow:
+    0 25px 70px rgba(37, 9, 2, .11);
+}
+
+
+/* ============================================
+   TABS
+============================================ */
+
+.memory-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  padding-bottom: 16px;
+
+  border-bottom: 1px solid #eee3e2;
+}
+
+.memory-tab {
+  border: none;
+
+  background: transparent;
+
+  border-radius: 7px;
+
+  padding: 9px 12px;
+
+  color: #534444;
+
+  font-size: 12px;
+
+  transition: .2s ease;
+}
+
+.memory-tab:hover {
+  background: var(--soft);
+  color: var(--red);
+}
+
+.memory-tab.active {
+  background: var(--red);
+
+  color: white;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 5px 14px rgba(128, 14, 19, .18);
+}
+
+
+/* ============================================
+   CARD TITLE
+============================================ */
+
+.memory-card h2 {
+  text-align: center;
+
+  font-size: 20px;
+
+  margin: 24px 0 19px;
+
+  color: var(--black);
+}
+
+
+/* ============================================
+   MEMORY GRID
+============================================ */
+
+.memory-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+}
+
+
+/* ============================================
+   UPLOAD BOX
+============================================ */
+
+.upload-box {
+  min-height: 185px;
+
+  border: 1px dashed var(--accent);
+
+  border-radius: 10px;
+
+  background: #fffafa;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition: .2s ease;
+}
+
+.upload-box:hover {
+  background: var(--soft);
+
+  border-color: var(--red);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 25px rgba(128, 14, 19, .07);
+}
+
+.upload-icon {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 12px;
+
+  margin: 0 auto 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f3dfdf;
+
+  color: var(--red);
+
+  font-size: 22px;
+  font-weight: 700;
+
+  transition: .2s ease;
+}
+
+.upload-box:hover .upload-icon {
+  transform: translateY(-3px);
+
+  background: #edd1d1;
+}
+
+.upload-title {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: var(--dark);
+}
+
+.upload-text {
+  margin-top: 5px;
+
+  font-size: 12px;
+
+  color: var(--muted);
+}
+
+.upload-text strong {
+  color: var(--red);
+}
+
+.upload-types {
+  margin-top: 9px;
+
+  color: #a79292;
+
+  font-size: 9px;
+}
+
+
+/* ============================================
+   CHAT BOX
+============================================ */
+
+.chat-box {
+  min-height: 185px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  padding: 14px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: white;
+
+  transition: .2s ease;
+}
+
+.chat-box:focus-within {
+  border-color: var(--accent);
+
+  box-shadow:
+    0 0 0 3px rgba(173, 40, 49, .06);
+}
+
+.chat-box textarea {
+  width: 100%;
+
+  flex: 1;
+
+  resize: none;
+
+  border: none;
+
+  outline: none;
+
+  color: var(--dark);
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+.chat-box textarea::placeholder {
+  color: #988585;
+}
+
+.chat-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.chat-footer span {
+  font-size: 9px;
+
+  color: #a28d8d;
+}
+
+.ask-btn {
+  border: none;
+
+  border-radius: 7px;
+
+  padding: 9px 12px;
+
+  background: var(--black);
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  transition: .2s ease;
+}
+
+.ask-btn:hover {
+  background: var(--red);
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 15px rgba(128, 14, 19, .18);
+}
+
+
+/* ============================================
+   INFO ROW
+============================================ */
+
+.info-row {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+
+  margin-top: 45px;
+}
+
+.info-card {
+  min-height: 75px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px;
+
+  border: 1px solid #eee3e2;
+
+  border-radius: 10px;
+
+  background: white;
+
+  transition: .2s ease;
+}
+
+.info-card:hover {
+  border-color: var(--border);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 25px rgba(37, 9, 2, .05);
+}
+
+.info-icon {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 9px;
+
+  background: #f4e1e1;
+
+  color: var(--red);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+}
+
+.info-card strong {
+  display: block;
+
+  font-size: 11px;
+
+  color: var(--dark);
+}
+
+.info-card span {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 9px;
+
+  color: var(--muted);
+}
+
+
+/* ============================================
+   RECENT FILES
+============================================ */
+
+.recent-section {
+  margin-top: 42px;
+}
+
+.section-header {
+  display: flex;
+
+  align-items: end;
+
+  justify-content: space-between;
+
+  margin-bottom: 13px;
+}
+
+.section-header h3 {
+  font-size: 17px;
+
+  color: var(--dark);
+}
+
+.section-header p {
+  margin-top: 3px;
+
+  font-size: 10px;
+
+  color: var(--muted);
+}
+
+.view-all {
+  border: none;
+
+  background: none;
+
+  color: var(--red);
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.view-all:hover {
+  color: var(--accent);
+}
+
+
+/* ============================================
+   FILE GRID
+============================================ */
+
+.file-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+}
+
+.file-card {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 12px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  background: white;
+
+  transition: .2s ease;
+}
+
+.file-card:hover {
+  border-color: var(--accent);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 20px rgba(37, 9, 2, .05);
+}
+
+.file-type {
+  width: 33px;
+  height: 37px;
+
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  flex-shrink: 0;
+}
+
+.file-type.pdf {
+  background: #f3dede;
+
+  color: var(--red);
+}
+
+.file-type.document {
+  background: #f0e0df;
+
+  color: var(--deep-red);
+}
+
+.file-type.image {
+  background: #F6E5EE;
+/* =========================================================
+   CENTER MEMORY AI LOGO
+========================================================= */
+
+.hero-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  margin: 0 auto 20px;
+
+  animation: logoAppear .7s ease-out both;
+}
+
+
+/* LOGO MARK */
+
+.hero-logo-mark {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px 15px 15px 4px;
+
+  background: var(--red);
+
+  color: white;
+
+  font-size: 25px;
+  font-weight: 900;
+
+  box-shadow:
+    0 8px 25px rgba(128, 14, 19, .22);
+
+  position: relative;
+}
+
+
+/* SMALL HIGHLIGHT */
+
+.hero-logo-mark::after {
+  content: "";
+
+  position: absolute;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  top: 7px;
+  right: 7px;
+
+  box-shadow:
+    0 0 10px rgba(173, 40, 49, .55);
+}
+
+
+/* LOGO TEXT */
+
+.hero-logo-text {
+  display: flex;
+  align-items: baseline;
+
+  font-size: 31px;
+
+  font-weight: 900;
+
+  letter-spacing: -1.5px;
+
+  line-height: 1;
+}
+
+
+.hero-logo-text span {
+  color: var(--black);
+}
+
+
+.hero-logo-text strong {
+  color: var(--red);
+
+  font-weight: 900;
+}
+
+
+/* SUBTLE HOVER */
+
+.hero-logo:hover .hero-logo-mark {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(128, 14, 19, .3);
+}
+
+
+.hero-logo-mark {
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+
+/* APPEAR ANIMATION */
+
+@keyframes logoAppear {
+
+  from {
+    opacity: 0;
+    transform: translateY(-12px) scale(.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .hero-logo {
+    margin-bottom: 17px;
+  }
+
+  .hero-logo-mark {
+    width: 43px;
+    height: 43px;
+
+    border-radius: 12px 12px 12px 3px;
+
+    font-size: 20px;
+  }
+
+  .hero-logo-text {
+    font-size: 25px;
+    letter-spacing: -1px;
+  }
+
+}
+}

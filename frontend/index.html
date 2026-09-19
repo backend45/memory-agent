@@ -1,78 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Memory Agent</title>
-
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MemoryAI</title>
+  <link rel="stylesheet" href="front.css">
 </head>
-
 <body>
+<div class="app">
 
-    <main class="container">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
 
-        <header class="header">
-            <h1>Memory Agent</h1>
-            <p>Upload your documents. Ask your memory anything.</p>
-        </header>
+    <div class="brand">
+      <div class="brand-logo">M</div>
+      <span>Memory<span class="red-text">AI</span></span>
+    </div>
+
+    <button class="new-btn">
+      <span>＋</span>
+      New Memory
+    </button>
+
+    <div class="sidebar-section">
+
+      <div class="sidebar-title">Workspace</div>
+
+      <div class="sidebar-item active">
+        <span>◉</span>
+        Memory Chat
+      </div>
+
+      <div class="sidebar-item">
+        <span>▱</span>
+        My Files
+      </div>
+
+      <div class="sidebar-item">
+        <span>☆</span>
+        Saved Answers
+      </div>
+
+    </div>
+
+    <div class="sidebar-section">
+
+      <div class="sidebar-title">Collections</div>
+
+      <div class="sidebar-item">
+        <span>▰</span>
+        College
+      </div>
+
+      <div class="sidebar-item">
+        <span>▰</span>
+        Projects
+      </div>
+
+      <div class="sidebar-item">
+        <span>▰</span>
+        Personal
+      </div>
+
+    </div>
+
+    <div class="sidebar-bottom">
+
+      <div class="workspace-user">
+        <div class="user-avatar">Z</div>
+
+        <div>
+          <strong>My Workspace</strong>
+          <small>Personal Memory</small>
+        </div>
+      </div>
+
+    </div>
+
+  </aside>
 
 
-        <!-- UPLOAD -->
-        <section class="card">
+  <!-- MAIN CONTENT -->
+  <main class="main">
 
-            <h2>Upload a document</h2>
+    <!-- TOP BAR -->
+    <header class="topbar">
 
-            <p class="description">
-                Upload a PDF and let AI remember it.
-            </p>
+      <div class="mobile-brand">
+        <div class="brand-logo">M</div>
+        <strong>Memory<span>AI</span></strong>
+      </div>
 
-            <div class="upload-area">
+      <div class="top-actions">
 
-                <input
-                    type="file"
-                    id="fileInput"
-                    accept=".pdf"
-                >
+        <!-- LANGUAGE BUTTON ONLY -->
+        <button class="language">
+          EN⌄
+        </button>
 
-                <button id="uploadButton">
-                    Upload PDF
+      </div>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="hero-content">
+
+
+        <!-- ==================================================
+             CENTER MEMORY AI LOGO
+        =================================================== -->
+
+        <div class="hero-logo">
+
+          <div class="hero-logo-mark">
+            M
+          </div>
+
+          <div class="hero-logo-name">
+            <span>Memory</span><strong>AI</strong>
+          </div>
+
+        </div>
+
+
+        <div class="eyebrow">
+          ✦ YOUR PERSONAL KNOWLEDGE ASSISTANT
+        </div>
+
+
+        <h1>
+          Everything you know,
+          <span>in one place.</span>
+        </h1>
+
+
+        <p class="hero-description">
+          Upload your documents, notes and screenshots.
+          Ask questions and find the information you need
+          without searching through everything yourself.
+        </p>
+
+
+        <!-- MAIN MEMORY CARD -->
+        <div class="memory-card">
+
+          <!-- NAVIGATION -->
+          <div class="memory-tabs">
+
+            <button class="memory-tab active">
+              ◉ Chat
+            </button>
+
+            <button class="memory-tab">
+              ☷ Summary
+            </button>
+
+            <button class="memory-tab">
+              ▣ Files
+            </button>
+
+            <button class="memory-tab">
+              ✦ Insights
+            </button>
+
+          </div>
+
+
+          <h2>
+            Ask your memory anything
+          </h2>
+
+
+          <!-- TWO BOXES -->
+          <div class="memory-grid">
+
+            <!-- UPLOAD -->
+            <label class="upload-box">
+
+              <input
+                type="file"
+                multiple
+                hidden
+              >
+
+              <div class="upload-content">
+
+                <div class="upload-icon">
+                  ↑
+                </div>
+
+                <div class="upload-title">
+                  Drop your files here
+                </div>
+
+                <div class="upload-text">
+                  or
+                  <strong>upload</strong>
+                  documents
+                </div>
+
+                <div class="upload-types">
+                  PDF · DOCX · TXT · Images
+                </div>
+
+              </div>
+
+            </label>
+
+
+            <!-- CHAT -->
+            <div class="chat-box">
+
+              <textarea
+                placeholder="Ask something about your information..."
+              ></textarea>
+
+              <div class="chat-footer">
+
+                <span>
+                  ✦ Source-backed answers
+                </span>
+
+                <button class="ask-btn">
+                  Ask Memory →
                 </button>
+
+              </div>
 
             </div>
 
-            <div id="uploadStatus"></div>
+          </div>
 
-        </section>
+        </div>
 
 
-        <!-- ASK -->
-        <section class="card">
+        <!-- TRUST / INFO -->
+        <div class="info-row">
 
-            <h2>Ask your memory</h2>
+          <div class="info-card">
 
-            <p class="description">
-                Ask a question about your uploaded documents.
-            </p>
+            <div class="info-icon">
+              ⌕
+            </div>
 
-            <textarea
-                id="question"
-                placeholder="e.g. When is my mathematics assignment due?"
-            ></textarea>
+            <div>
+              <strong>
+                Search everything
+              </strong>
 
-            <button id="askButton">
-                Ask AI
+              <span>
+                Find information instantly
+              </span>
+            </div>
+
+          </div>
+
+
+          <div class="info-card">
+
+            <div class="info-icon">
+              ✓
+            </div>
+
+            <div>
+              <strong>
+                Source backed
+              </strong>
+
+              <span>
+                Know where every answer came from
+              </span>
+            </div>
+
+          </div>
+
+
+          <div class="info-card">
+
+            <div class="info-icon">
+              ✦
+            </div>
+
+            <div>
+              <strong>
+                Smart memory
+              </strong>
+
+              <span>
+                Understand context across files
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- RECENT FILES -->
+        <section class="recent-section">
+
+          <div class="section-header">
+
+            <div>
+
+              <h3>
+                Recently added
+              </h3>
+
+              <p>
+                Your information at a glance.
+              </p>
+
+            </div>
+
+            <button class="view-all">
+              View all →
             </button>
 
-            <div id="answer"></div>
+          </div>
+
+
+          <div class="file-grid">
+
+            <div class="file-card">
+
+              <div class="file-type pdf">
+                PDF
+              </div>
+
+              <div class="file-info">
+
+                <strong>
+                  College Notice
+                </strong>
+
+                <span>
+                  2.4 MB · PDF
+                </span>
+
+              </div>
+
+              <div class="dots">
+                •••
+              </div>
+
+            </div>
+
+
+            <div class="file-card">
+
+              <div class="file-type document">
+                DOC
+              </div>
+
+              <div class="file-info">
+
+                <strong>
+                  Project Notes
+                </strong>
+
+                <span>
+                  840 KB · DOCX
+                </span>
+
+              </div>
+
+              <div class="dots">
+                •••
+              </div>
+
+            </div>
+
+
+            <div class="file-card">
+
+              <div class="file-type image">
+                IMG
+              </div>
+
+              <div class="file-info">
+
+                <strong>
+                  WhatsApp Screenshot
+                </strong>
+
+                <span>
+                  1.1 MB · Image
+                </span>
+
+              </div>
+
+              <div class="dots">
+                •••
+              </div>
+
+            </div>
+
+          </div>
 
         </section>
 
-    </main>
+
+        <!-- SAMPLE ANSWER -->
+        <section class="answer-section">
+
+          <div class="answer-top">
+
+            <span>
+              SOURCE-BACKED MEMORY
+            </span>
+
+            <small>
+              ✓ Verified
+            </small>
+
+          </div>
 
 
-    <script src="./script.js"></script>
+          <div class="answer-content">
 
+            <h3>
+              Example answer
+            </h3>
+
+            <p>
+              Your first semester payment deadline is
+              <strong>24 June</strong>.
+            </p>
+
+
+            <div class="source-card">
+
+              <div class="source-icon">
+                PDF
+              </div>
+
+              <div>
+
+                <strong>
+                  College Notice.pdf
+                </strong>
+
+                <span>
+                  Page 2 · Payment Information
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+<script src="front.js"></script>
 </body>
 </html>
